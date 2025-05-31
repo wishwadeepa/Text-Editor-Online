@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Text Editor</title>
+    <link rel="stylesheet" href="myEditor.css">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="page-content-wrapper"> 
+        <div class="editor-container">
+            <div class="toolbar">
+                <button id="boldBtn" title="Bold"><span class="material-symbols-outlined">format_bold</span></button>
+                <button id="underlineBtn" title="Underline"><span class="material-symbols-outlined">format_underlined</span></button>
+                <button id="italicBtn" title="Italic"><span class="material-symbols-outlined">format_italic</span></button>
+                
+                <div class="color-picker-wrapper" id="fontColorWrapper" title="Font Color">
+                    <span class="color-picker-label">A</span>
+                    <input type="color" id="fontColorInput" value="#000000">
+                </div>
+
+                <button id="alignLeftBtn" title="Align Left"><span class="material-symbols-outlined">format_align_left</span></button>
+                <button id="alignCenterBtn" title="Align Center"><span class="material-symbols-outlined">format_align_center</span></button>
+                <button id="alignRightBtn" title="Align Right"><span class="material-symbols-outlined">format_align_right</span></button>
+                <button id="alignJustifyBtn" title="Align Justify"><span class="material-symbols-outlined">format_align_justify</span></button>
+                
+                <button id="undoBtn" title="Undo"><span class="material-symbols-outlined">undo</span></button>
+                <button id="redoBtn" title="Redo"><span class="material-symbols-outlined">redo</span></button>
+            </div>
+            <div id="textEditor" 
+                 contenteditable="true" 
+                 spellcheck="false"
+                 data-placeholder="Start typing here...
+Select text to apply formatting. Text alignment applies to the whole editor content.">
+            </div>
+        </div>
+        <div class="credits"> 
+            © Sharada Wishwadeepa
+        </div>
+    </div>
+
+    <script src="myEditor.js"></script>
+</body>
+</html>
